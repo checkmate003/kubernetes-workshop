@@ -33,4 +33,4 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: helloworld-secrets
-              key: database
+                key: database
