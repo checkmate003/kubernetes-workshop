@@ -20,17 +20,17 @@ spec:
         - name: nodejs-port
           containerPort: 3000
         env:
-        - name: MYSQL_HOST
-          value: database-service
-        - name: MYSQL_USER
-          value: root
-        - name: MYSQL_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: helloworld-secrets
-              key: rootPassword
-        - name: MYSQL_DATABASE
-          valueFrom:
-            secretKeyRef:
-              name: helloworld-secrets
+          - name: MYSQL_HOST
+            value: database-service
+          - name: MYSQL_USER
+            value: root
+          - name: MYSQL_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: helloworld-secrets
+                key: rootPassword
+          - name: MYSQL_DATABASE
+            valueFrom:
+              secretKeyRef:
+                name: helloworld-secrets
               key: database
